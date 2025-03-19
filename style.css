@@ -1,0 +1,1018 @@
+/* header style */
+* {
+    box-sizing: border-box;
+   }
+body {
+    font-family: 'Cairo', sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: #f4f4f4;
+    color: #333;
+}
+
+.nav-container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 10px;
+    background-color: black;
+}
+
+
+.logo {
+    max-width: 20%;
+    height: 50%;
+}
+
+navigation {
+    background-color: black;
+
+}
+.menu-icon {
+    font-size: 30px;
+    padding: 10px;
+    cursor: pointer;
+    color: white
+}
+.overlay {
+    height: 100%;
+    width: 0;
+    position: fixed;
+    z-index: 1;
+    top: 0;
+    left: 0;
+    background-color: rgb(0, 0, 0);
+    background-color: rgba(0, 0, 0, 0.9);
+    overflow-x: hidden;
+    transition: 0.5s;
+}
+
+.overlay-content {
+    position: relative;
+    top: 25%;
+    width: 100%;
+    text-align: center;
+    margin-top: 30px;
+}
+
+.overlay a {
+    padding: 8px;
+    text-decoration: none;
+    font-size: 36px;
+    color: #818181;
+    display: block;
+    transition: 0.3s;
+}
+
+.overlay a:hover,
+.overlay a:focus {
+    color: #d5bd19;
+
+}
+
+.overlay .closebtn {
+    position: absolute;
+    top: 20px;
+    right: 45px;
+    font-size: 60px;
+}
+
+
+
+/* عرض الحاويات */
+.conatinermain {
+    opacity: 0;
+    transition: opacity 0.5s ease, transform 0.5s ease;
+    transform: translateY(20px);
+    margin: 20px 0; /* إضافة مسافة بين البوستات */
+}
+
+.conatinermain.visible {
+    opacity: 1;
+    transform: translateY(0px);
+            
+    
+}
+
+
+
+
+/* style icon bar */
+
+.icon-bar {
+    display: flex;
+    justify-content: center;
+    padding: 10px;
+    /* margin: 5px; */
+    background-color: #f0f0f0;
+    /* لون الخلفية */
+    animation: fadeIn 1s;
+    /* حركة الظهور */
+    overflow: hidden;
+    /* لمنع ظهور الأيقونات خارج الشريط */
+}
+
+.icon {
+    margin: 0 5vw;
+    /* استخدام وحدات مرنة للمسافة بين الأيقونات */
+    color: #333;
+    /* لون الأيقونات */
+    font-size: 7vw;
+    /* حجم الأيقونات يعتمد على عرض الشاشة */
+    transition: color 0.3s;
+}
+
+.icon:hover {
+    color: #344a80;
+    /* تغيير اللون عند التمرير */
+}
+
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+        transform: translateY(-20px);
+    }
+
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+
+/* style hero*/
+.hero {
+    display: flex;
+    padding: 20px;
+    background-color: black;
+    text-align: center;
+}
+
+.navigation {
+    width: 100%;
+    position: sticky;
+    top: 0;
+    z-index: 100;
+}
+
+.lists {
+    color: rgba(199, 189, 189, 0.5);
+    direction: rtl;
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    margin-bottom: 20px;
+}
+
+.lists li {
+    list-style: none;
+    margin: 5px;
+}
+
+.lists li a {
+    /* color: #04AA6D; */
+    color: #04AAEB;
+    font-weight: 800;
+    padding: 10px 15px;
+    background-color: #343a40;
+    border-radius: 10px;
+    text-decoration: none;
+}
+
+.lists li a:hover {
+    color: #2ace92;
+}
+
+.hero-content {
+    display: flex;
+    flex-direction: row-reverse;
+    justify-content: space-around;
+    width: 100%;
+    align-items: center;
+}
+
+.image-container {
+    position: relative;
+    max-width: 400px;
+    width: 100%;
+}
+
+.hero-image {
+    width: 100%;
+    height: auto;
+    border-radius: 10px;
+}
+
+.name-overlay {
+    position: absolute;
+    bottom: 20px;
+    left: 50%;
+    transform: translateX(-50%);
+    color: white;
+    font-size: 24px;
+    background-color: rgba(0, 0, 0, 0.5);
+    padding: 5px;
+    border-radius: 5px;
+}
+
+.text-section {
+    margin: 20px;
+    text-align: right;
+}
+
+.job-title {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    color: #d5bd19;
+    margin-bottom: 8%;
+}
+
+.passion-statement {
+    color: #68A;
+    max-width: 600px;
+    font-size: 16px;
+    margin-bottom: 20px;
+    font-weight: bolder;
+}
+
+.contact-button {
+    background-color: #85CDFD;
+    color: black;
+    padding: 10px 20px;
+    text-decoration: none;
+    border-radius: 5px;
+    border: #79D7BE 2px solid;
+    transition: background-color 0.3s;
+}
+
+.contact-button:hover {
+    background-color: #0056b3;
+}
+
+#image{
+    background-color: black;
+}
+
+.social-icons {
+    display: flex;
+    justify-content: flex-end;
+    margin-top: 10px;
+}
+.social-icons a:hover{
+    color: hsl(60, 70%, 79%);
+}
+
+.social-icon {
+    font-size: 25px;
+    margin: 0 10px;
+    color: #4564ad;
+}
+.bottomright {
+position: absolute;
+bottom:56px;
+right: 38%;
+font-size: 18px;
+color: #456527;
+box-shadow: 1px 1px 13px;
+}
+
+
+#bottomright {
+position: absolute;
+bottom:-20px;
+font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+right: 30%;
+/* font-size: 18px; */
+color: #d5bd19;
+}
+#contact-btn {
+    padding: 10px 20px;
+    font-size: 16px;
+    border: 2px solid #d5bd19;
+    /* border: 2px solid #f4e26b; */
+
+    border-radius: 5px;
+    background-color: rgb(50, 45, 45);
+    color: #9bbee3;
+    cursor: pointer;
+    transition: border-color 0.5s ease, background-color 0.5s ease;
+}
+
+#contact-btn:hover {
+    border-color: #FF5733;
+    /* background-color: #FF5733; */
+    color: white;
+}
+
+
+.btn:hover {background: rgb(132, 164, 196);}
+.btn {
+    border: none;
+    padding: 10px 18px;
+    font-size: 16px;
+    font-weight: bold;
+    cursor: pointer;
+    display: inline-block;
+    background-color: #68A;
+    border-radius: 10px;
+}
+.info {color: rgb(234, 238, 241);}
+
+/* style form */
+
+
+form {
+    font-family: Arial, Helvetica, sans-serif;
+    direction: rtl;}
+
+/* Full-width input fields */
+input[type=text], input[type=password] {
+  width: 100%;
+  padding: 12px 20px;
+  margin: 8px 0;
+  display: inline-block;
+  border: 1px solid #ccc;
+  box-sizing: border-box;
+}
+
+/* Set a style for all buttons */
+button {
+  background-color: #04AA6D;
+  color: white;
+  padding: 14px 20px;
+  margin: 8px 0;
+  border: none;
+  cursor: pointer;
+  width: 100%;
+}
+
+button:hover {
+  opacity: 0.8;
+}
+
+/* Extra styles for the cancel button */
+.cancelbtn {
+  width: auto;
+  padding: 10px 18px;
+  background-color: #f44336;
+}
+
+/* Center the image and position the close button */
+.imgcontainer {
+  text-align: center;
+  margin: 24px 0 12px 0;
+  position: relative;
+}
+
+img.avatar {
+  width: 10%;
+    height: 100px;
+    border-radius: 27%;
+    opacity: 0.1;
+}
+
+.container {
+  padding: 16px;
+}
+
+span.psw {
+  float: right;
+  padding-top: 16px;
+}
+
+/* The Modal (background) */
+.modal {
+  display: none; /* Hidden by default */
+  position: fixed; /* Stay in place */
+  z-index: 1; /* Sit on top */
+  left: 0;
+  top: 0;
+  width: 100%; /* Full width */
+  height: 100%; /* Full height */
+  overflow: auto; /* Enable scroll if needed */
+  background-color: rgb(0,0,0); /* Fallback color */
+  background-color: rgba(0,0,0,0.4); /* Black w/ opacity */
+  padding-top: 60px;
+}
+
+/* Modal Content/Box */
+.modal-content {
+  background-color: #fefefe;
+  margin: 5% auto 15% auto; /* 5% from the top, 15% from the bottom and centered */
+  border: 1px solid #888;
+  width: 80%; /* Could be more or less, depending on screen size */
+}
+
+/* The Close Button (x) */
+.close {
+  position: absolute;
+  right: 25px;
+  top: 0;
+  color: #000;
+  font-size: 35px;
+  font-weight: bold;
+}
+
+.close:hover,
+.close:focus {
+  color: red;
+  cursor: pointer;
+}
+
+/* Add Zoom Animation */
+.animate {
+  -webkit-animation: animatezoom 0.6s;
+  animation: animatezoom 0.6s
+}
+
+@-webkit-keyframes animatezoom {
+  from {-webkit-transform: scale(0)} 
+  to {-webkit-transform: scale(1)}
+}
+  
+@keyframes animatezoom {
+  from {transform: scale(0)} 
+  to {transform: scale(1)}
+}
+
+
+
+/*  */
+/*  */
+
+
+/* style about me*/
+
+.container_about {
+    /* max-width: 1000px; */
+    margin: auto;
+    padding: 20px;
+    background: white;
+    border-radius: 10px;
+    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.2);
+    direction: rtl;
+}
+
+/* h1 {
+    text-align: center;
+    font-size: 2.5em;
+    margin-bottom: 20px;
+} */
+
+.about_sub {
+    color: #343a40;
+    font-size: 1.8em;
+    border-bottom: 2px solid #00FF9C;
+    padding-bottom: 10px;
+    margin-top: 30px;
+    position: relative;
+    overflow: hidden;
+}
+
+.about_sub i {
+    color: #007BFF;
+    margin-left: 13%;
+    font-size: 1.5em;
+    position: absolute;
+    left: 0;
+    animation: bounce 1s ease forwards;
+}
+
+
+@keyframes bounce {
+    0% {
+        transform: translateY(-20px);
+        opacity: 0;
+    }
+
+    50% {
+        transform: translateY(10px);
+        opacity: 1;
+    }
+
+    100% {
+        transform: translateY(0);
+    }
+}
+
+.about_paragrph {
+    margin: 15px 0;
+    font-size: 1.1em;
+    line-height: 1.8;
+    padding-right: 20px;
+    /* إضافة مسافة من جهة اليمين للنص */
+    opacity: 0;
+    transition: opacity 0.9s ease, transform 1s ease;
+    transform: translateY(20px);
+
+}
+
+.about_paragrph.visible {
+    opacity: 1;
+    transform: translateY(0px); 
+}
+
+.highlight {
+    background-color: #9ACBD0;
+    color: white;
+    padding: 2px 2px;
+    border-radius: 5px;
+}
+
+
+/* style projects */
+
+
+  .project-single,.project-single{
+    /* background-color: darkgrey; */
+    padding: 5px;
+  }
+  #project-single{
+    /* background-color: darkgrey; */
+    padding: 5px;
+  }
+
+  .proContainer ,.proContain{
+    width: 80%;
+    height: 50%;
+    border: #9a9393 solid 2px;
+    margin: auto;
+    padding: 2px;
+    box-shadow: -1px 1px 0px 3px #a8b4c0;
+
+  }
+
+  .mySlides img {
+    vertical-align: middle;
+    width: fit-content;
+    height: 100%;
+  }
+
+  .mySlide img {
+    vertical-align: middle;
+    width: fit-content;
+    height: 100%;
+  }
+
+  /* Position the image container (needed to position the left and right arrows) */
+  .proContainer,.proContain {
+    position: relative;
+  }
+
+  /* Hide the images by default */
+  .mySlides{
+    display: none;
+    width:fit-content;
+    margin: auto;
+  }
+  .mySlide {
+    display: none;
+    width:fit-content;
+    margin: auto;
+  }
+
+  /* Add a pointer when hovering over the thumbnail images */
+  .cursor {
+    cursor: pointer;
+  }
+
+  /* Next & previous buttons */
+  .prev,
+  .next {
+    cursor: pointer;
+    position: absolute;
+    top: 20%;
+    width: auto;
+    padding: 16px;
+    margin-top: -40px;
+    color: rgb(85, 111, 207);
+    font-weight: bold;
+    font-size: 30px;
+    border-radius: 0 3px 3px 0;
+    user-select: none;
+    -webkit-user-select: none;
+  }
+
+  .pre,
+  .nex {
+    cursor: pointer;
+    position: absolute;
+    top: 20%;
+    width: auto;
+    padding: 16px;
+    margin-top: -40px;
+    color: rgb(85, 111, 207);
+    font-weight: bold;
+    font-size: 30px;
+    border-radius: 0 3px 3px 0;
+    user-select: none;
+    -webkit-user-select: none;
+  }
+
+  /* Position the "next button" to the right */
+  .next ,.nex {
+    right: 10px;
+    border-radius: 3px 0 0 3px;
+  }
+
+  .prev ,pre {
+    left:10px;
+    border-radius: 3px 0 0 3px;
+  }
+
+
+  /* On hover, add a black background color with a little bit see-through */
+  .prev:hover,
+  .next:hover,
+  .nex:hover,
+  .nex:hover {
+    background-color: rgba(0, 0, 0, 0.8);
+  }
+
+  /* Number text (1/3 etc) */
+  .numbertext {
+    color: #ddd5d5;
+    font-size: 12px;
+    padding: 8px 12px;
+    position: absolute;
+    top: 0;
+    background-color: #222;
+    border-radius: 20px;
+
+  }
+
+  /* Container for image text */
+  .caption-container ,.caption-container {
+    text-align: center;
+    background-color: #2e2c2c;
+    padding: 2px 16px;
+    color: white;
+    margin: 5px 0;
+    box-shadow: 1px 1px 5px rgb(156, 156, 164);
+    border-radius: 20px 0 ;
+}
+
+
+  .row:after {
+    content: "";
+    display: table;
+    clear: both;
+  }
+
+  .rows:after {
+    content: "";
+    display: table;
+    clear: both;
+  }
+
+  /* Six columns side by side */
+  .column {
+    float: left;
+    width: 15.66%;
+    background-color: #0a0c0e;
+    padding:0 5px;
+    border-radius: 5px;
+    margin:1px 1px;
+  }
+  .columns {
+    float: left;
+    width: 15.66%;
+    background-color: #0a0c0e;
+    padding:0 5px;
+    border-radius: 5px;
+    margin:1px 1px;
+  }
+  
+  .columns img{
+    padding:5px 0 ;
+  }
+
+  .column img{
+    padding:5px 0 ;
+  }
+  /* Add a transparency effect for thumnbail images */
+  .demo ,.dmo {
+    opacity: 0.6;
+  }
+
+  .active,
+  .demo:hover {
+    opacity: 1;
+  }
+  .active,.dmo:hover {
+    opacity: 1;
+  }
+  
+
+/* style post*/
+
+#post_category {
+    text-align: center;
+    padding: 5px;
+    /* background-color: #9ACBD0; */
+    color: black;
+
+}
+
+h1 {
+    margin: 0;
+    font-size: 2.5em;
+}
+
+.articles {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-around;
+    /* padding: 20px; */
+}
+
+.article {
+    background-color: white;
+    border-radius: 8px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    margin: 5px;
+    width: calc(30% - 20px);
+    text-align: center;
+    overflow: hidden;
+}
+
+.article img {
+    width: 100%;
+    height: auto;
+    border-bottom: 1px solid blue;
+}
+
+.category {
+    font-size: 1em;
+    color: #555;
+    margin: 10px 4px;
+    text-align: right;
+}
+.categoryText{
+    background-color: rgb(233, 245, 172);
+    margin-right: 4px;
+    padding: 6px;
+    border-radius: 3px;
+}
+
+.title {
+    font-size: 1.2em;
+    margin: 10px 0;
+    font-weight: 600;
+}
+
+.excerpt {
+    padding: 10px;
+    font-size: 1em;
+    color: #666;
+}
+
+/* style content post*/
+header {
+    text-align: center;
+    padding: 20px;
+    background-color: #007bff;
+    color: white;
+}
+
+h1 {
+    margin: 0;
+    font-size: 2.5em;
+}
+
+.post-content {
+    max-width: 800px;
+    margin: 20px auto;
+    padding: 20px;
+    background-color: white;
+    border-radius: 8px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+.post-image {
+    width: 100%;
+    height: auto;
+    border-radius: 8px;
+}
+
+.category {
+    font-size: 1em;
+    color: #555;
+    margin: 10px 0;
+}
+
+.excerpt {
+    font-size: 1em;
+    color: #666;
+    margin: 10px 0;
+}
+
+h2 {
+    font-size: 1.8em;
+    margin-top: 20px;
+}
+
+p {
+    line-height: 1.6;
+    font-size: 1em;
+    color: #666;
+}
+.lists li {
+    display: inline;
+}
+
+ .whatsapp-icon {
+            position: fixed;
+            bottom: 20px;
+            right: 20px;
+            background-color: #25D366;
+            color: white;
+            border-radius: 50%;
+            padding: 10px;
+            font-size: 24px;
+            box-shadow: 0 2px 10px rgba(0, 0, 0, 0.3);
+            text-align: center;
+            z-index: 1000;
+            animation: bounce 2s infinite; /* إضافة حركة الاهتزاز */
+        }
+
+        .whatsapp-icon:hover {
+            background-color: #128C7E;
+        }
+
+        @keyframes bounce {
+            0%, 20%, 50%, 80%, 100% {
+                transform: translateY(0);
+            }
+            40% {
+                transform: translateY(-10px);
+            }
+            60% {
+                transform: translateY(-5px);
+            }
+        }
+/* query hero*/
+
+@media (max-width: 768px) {
+    .hero-content {
+        flex-direction: column;
+        align-items: center;
+        text-align: center;
+    }
+
+    .text-section {
+        text-align: center;
+    }
+
+    .social-icons{
+    justify-content: center;
+    }
+}
+
+
+/* query header*/
+@media screen and (max-height: 450px) {
+    .overlay a {
+        font-size: 20px
+    }
+
+    .overlay .closebtn {
+        font-size: 40px;
+        top: 15px;
+        right: 35px;
+    }
+}
+
+
+/* تنسيق للأجهزة المحمولة */
+@media (max-width: 650px) {
+    #mySidenav {
+        display: none;
+        /* إخفاء القائمة الجانبية على الهواتف */
+    }
+
+    .name-overlay {
+        font-size: 20px;
+        /* حجم الخط في الهاتف */
+    }
+
+    .job-title {
+        font-size: 18px;
+        /* حجم الخط في الهاتف */
+    }
+
+    .passion-statement {
+        font-size: 14px;
+        /* حجم الخط في الهاتف */
+    }
+
+    .hero {
+        grid-template-columns: auto auto auto;
+
+    }
+
+    .article {
+        width: calc(45% - -14px);
+    }
+
+
+}
+/* form */
+/* Change styles for span and cancel button on extra small screens */
+@media screen and (max-width: 300px) {
+    span.psw {
+       display: block;
+       float: none;
+    }
+    .cancelbtn {
+       width: 100%;
+    }
+  }
+@media (max-width: 580px) {
+    .article {
+         width: calc(93% - 2px);
+    }
+}
+/* تنسيق للأجهزة اللوحية واللابتوب */
+@media (min-width: 651px) {
+    .social-icons {
+        flex-direction: row;
+        /* وضع أفقي على الأجهزة الأكبر */
+    }
+
+    .menu-icon {
+        display: none;
+    }
+    
+    .lists{
+        display: inline-block;
+    }
+
+    .social-icon {
+        margin: 0 30px;
+        /* المسافة بين الأيقونات */
+    }
+
+    .icon {
+        margin: 0 50px;
+    }
+}
+
+@media screen and (max-height: 450px) {
+    .overlay a {
+        font-size: 20px
+    }
+
+    .overlay .closebtn {
+        font-size: 40px;
+        top: 15px;
+        right: 35px;
+    }
+}
+
+/* query about me*/
+@media (max-width: 600px) {
+    h1 {
+        font-size: 2em;
+    }
+
+    h2 {
+        font-size: 1.5em;
+    }
+
+    p {
+        font-size: 1em;
+    }
+}
+
+
+/* query post */
+@media (max-width: 768px) {
+    .article {
+        width: calc(45% - 20px);
+    }
+}
+
+@media (max-width: 480px) {
+    .article {
+        width: calc(100% - 20px);
+    }
+}
+
+/* query contentpost*/
+@media (max-width: 768px) {
+    h1 {
+        font-size: 2em;
+    }
+
+    h2 {
+        font-size: 1.6em;
+    }
+}
+
+
+@media (max-width: 600px) {
+    .lists {
+        display: none; /* إخفاء القائمة على الشاشات الصغيرة */
+    }
+    
+}

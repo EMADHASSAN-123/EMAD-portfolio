@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="ar">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="style.css">
+    <script src="jquery-3.7.1.js"></script>
+</head>
+
+<body>
+    <div id="header"    class="conatinermain"></div>
+    <div id="icon-bar"  class="conatinermain"></div>
+    <div id="content"   class="conatinermain"></div>
+    <div id="aboutMe"   class="conatinermain"></div>
+    <div id="formNote" class=""></div>
+
+    <a href="https://wa.me/773658667" target="_blank" class="whatsapp-icon">
+    <i class="fab fa-whatsapp"></i>
+</a>
+
+    <script>
+        function loadComponents(URL, elementId) {
+            $.ajax({
+                method: "GET",
+                url: URL,
+                success: function (data) {
+                    $(elementId).html(data);
+                }
+            })
+
+        }
+        loadComponents('headers.html', '#header');
+        loadComponents('icon_bar.html', '#icon-bar');
+        loadComponents('hero.html', '#content');
+        loadComponents('aboutMe.html', '#aboutMe');
+        loadComponents('noteForm.html', '#formNote');
+
+        // loadComponents('post.html', '#blogs');
+        // loadComponents('project2.html', '#project-single');
+
+    </script>
+
+</body>
+
+</html>
+

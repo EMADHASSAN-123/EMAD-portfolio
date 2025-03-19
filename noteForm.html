@@ -1,0 +1,33 @@
+
+<div id="id01" class="modal">//modal
+
+    <form class="modal-content animate" action="/action_page.php" method="post">
+        <div class="imgcontainer">
+            <span onclick="document.getElementById('id01').style.display='none'" class="close"
+                title="Close Modal">&times;</span>
+            <h2> سعيد برسالتك </h2>
+        </div>
+
+        <div class="container">
+            <label for="uname"><b>الايميل</b></label>
+            <input type="text" placeholder="ادخل ايميلك" name="uname" required>
+
+            <label for="psw"><b>
+                    <p>
+                        رسالتك
+                    </p>
+                </b></label>
+            <textarea name="massege" id="" cols="30" rows="10" placeholder="من فضلك ادخل الرسالة"></textarea>
+            <!-- <input type="" placeholder="من فضلك ادخل الرسالة" name="psw" required> -->
+
+            <button type="submit">ارسال</button>
+
+        </div>
+
+        <div class="container" style="background-color:#f1f1f1">
+            <button type="button" onclick="document.getElementById('id01').style.display='none'"
+                class="cancelbtn">Cancel</button>
+            <!-- <span class="psw">Forgot <a href="#">password?</a></span> -->
+        </div>
+    </form>
+</div>

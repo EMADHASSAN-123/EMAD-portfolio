@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>header profile</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&family=Cairo:wght@400;600&display=swap"
+        rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+</head>
+<style>
+</style>
+<body>
+    <navigation>
+        <div class="nav-container">
+            <a href="#">
+                <img src="img/weblogo.png" width="300px" alt="" style="max-width:314px;height: auto;">
+            </a>
+            <ul class="lists">
+                <li><a href="#icon-bar">الرئيسية</a></li>
+                <li><a href="#aboutMe" id="edcuation">عني</a></li>
+                <li><a href="#" id="blog"> *مدونتي</a></li>
+                <li><a href="#" id="mywork">*اعمالي</a></li>
+                <li><a href="#content">تواصل</a></li>
+                <button id="notrbtn" onclick="document.getElementById('id01').style.display='block'" style="width:auto; font-weight: 900; border-radius: 10px;">   ملاحظتك</button>
+            </ul>
+            <span class="menu-icon" onclick="openNav()">&#9776;</span>
+        </div>
+
+        <div id="myNav" class="overlay">
+            <a href="javascript:void(0)" class="closebtn" onclick="closeNav()">&times;</a>
+            <div class="overlay-content">
+
+                <a href="#aboutMe">رحلتي التعليمية</a>
+                <a href="#service">خدماتي</a>
+                <a href="#">اعمالي</a>
+                <a href="#content">تواصل معي</a>
+                <button id="notrbtn" onclick="document.getElementById('id01').style.display='block'" style="width:auto; font-weight: 900; border-radius: 10px;">   ملاحظتك</button>
+            </div>
+        </div>
+
+
+        <script src="JS.js"></script>
+        <script>
+            $(document).ready(function () {
+                var windowWidth = $(window).width();
+                if (windowWidth < 660) {
+                    $(".lists li").css('display', "none");
+                }
+
+                function anmiationparag() {
+                    const about_paragrph = document.querySelectorAll('.about_paragrph');
+
+                    const observers = new IntersectionObserver((entries) => {
+                        entries.forEach(entry => {
+                            if (entry.isIntersecting) {
+                                entry.target.classList.add('visible');
+                                observers.unobserve(entry.target);
+                            }
+                        });
+                    });
+
+                    about_paragrph.forEach(post => {
+                        observer.observe(post);
+                    });
+
+                }
+                anmiationparag();
+            });
+        </script>
+</body>

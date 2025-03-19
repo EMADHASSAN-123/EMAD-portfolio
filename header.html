@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <title>INDEX HEADER</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&family=Cairo:wght@400;600&display=swap"
+        rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+</head>
+
+<body>
+    <navigation>
+        <div class="nav-container">
+            <span class="menu-icon" onclick="openNav()">&#9776;</span>
+        </div>
+
+        <div id="myNav" class="overlay">
+            <a href="javascript:void(0)" class="closebtn" onclick="closeNav()">&times;</a>
+            <div class="overlay-content">
+                <a href="#about">رحلتي التعليمية</a>
+                <a href="#posts">مدونتي</a>
+                <a href="#" id="service">خدماتي</a>
+                <a href="projects.html">اعمالي</a>
+                <a href="#" id="contact">تواصل معي</a>
+            </div>
+        </div>
+    </navigation>
+
+
+    <div id="icon-bar"></div>
+    <div id="content"></div>
+    <div id="section"></div>
+    <div id="posts"></div>
+    <!-- <div id="project-single"></div> -->
+
+
+    <script>
+        
+        async function loadComponent(url, elementId) {
+            const response = await fetch(url);
+            const content = await response.text();
+            document.getElementById(elementId).innerHTML = content;
+        }
+
+        loadComponent('icon_bar.html', 'icon-bar');
+        loadComponent('hero.html', 'content');
+        loadComponent('aboutMe.html', 'section');
+        // loadComponent('project.html', 'project-single');
+        loadComponent('post.html', 'posts');
+
+        
+
+        
+    </script>
+
+
+    <script src="JS.js"></script>
+
+    

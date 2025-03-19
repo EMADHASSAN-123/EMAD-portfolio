@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="style.css">
+    <script src="jquery-3.7.1.js"></script>
+</head>
+
+<body>
+    <div id="header"    class="conatinermain"></div>
+    <div id="icon-bar"  class="conatinermain"></div>
+    <div id="content"   class="conatinermain"></div>
+    <div id="section"   class="conatinermain"></div>
+    <div id="blogs"     class="conatinermain"></div>
+    <div id="id01"      class="modal">
+    <div id="project-single"></div>
+
+    <script>
+        function loadComponents(URL, elementId) {
+            $.ajax({
+                method: "GET",
+                url: URL,
+                success: function (data) {
+                    $(elementId).html(data);
+                }
+            })
+
+        }
+        loadComponents('headers.html', '#header');
+        loadComponents('icon_bar.html', '#icon-bar');
+        loadComponents('hero.html', '#content');
+        loadComponents('aboutMe.html', '#section');
+        loadComponents('post.html', '#blogs');
+        loadComponents('project2.html', '#project-single');
+        loadComponents('noteForm.html', '.modal');
+
+    </script>
+
+</body>
+
+</html>
+
+<!-- #04AAEB -->
